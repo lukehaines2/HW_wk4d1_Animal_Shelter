@@ -25,3 +25,6 @@ def menu
 end
 
 response = menu
+
+
+if statemnt press 1 bring this menu up if 2 skip etc
