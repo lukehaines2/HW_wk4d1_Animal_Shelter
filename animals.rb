@@ -1,17 +1,17 @@
 # - name
 # - age
-# - gender
+# - a_gender
 # - number of pets
 
 class Animals
 
-  attr_accessor :name, :age, :gender, :number
+  attr_accessor :name, :a_age, :a_gender, :a_number
 
   def initialize(animal_data={})
     @name = animal_data[:name]
-    @age = animal_data[:age]
-    @gender = animal_data[:gender]
-    @number = animal_data[:number]
+    @a_age = animal_data[:a_age]
+    @a_gender = animal_data[:a_gender]
+    @a_number = animal_data[:a_number]
   end
 
 end
@@ -20,7 +20,7 @@ end
 
 def initialize(animal_data={})
     @name = animal_data[:name]
-    @age = animal_data[:age]
-    @gender = animal_data[:gender]
-    @number = animal_data[:number]
+    @a_age = animal_data[:a_age]
+    @a_gender = animal_data[:a_gender]
+    @a_number = animal_data[:a_number]
   end
