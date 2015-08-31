@@ -1,0 +1,4 @@
+- name
+- age
+- gender
+- number of pets
