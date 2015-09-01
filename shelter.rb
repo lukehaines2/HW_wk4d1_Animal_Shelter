@@ -1,33 +1,15 @@
 
-# - breed
-# - age
-# - gender
-# - favorite toys
-# - client_names.
-
-
 class Shelter
 
-attr_accessor :breed, :gender, :age, :toys, :client_names
+  attr_accessor :adpt_animal, :adopt_list
 
-  def initialize(breed, gender, age)
-    @breed = breed
-    @gender = gender
-    @age = age
-    @toys = []
-    @client_names = []
+  def initialize(adpt_animal)
+    @adpt_animal = @adpt_animal
+    @adopt_list = []
   end
 
-  def add_toy toy
-    toys << toy
-  end
+end
 
-  def add_client client
-    client_names << client
-  end
-  
-  def to_s
-    "#{gender} with #{breed} toys"
-  end
-
+def adpt_list adpt_list
+  adopt_list << adpt_list
 end

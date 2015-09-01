@@ -1,18 +1,27 @@
 # see the list of available animals to adopt
 # give up their animal for adoption
 
-class Client
+class Clients
 
-  attr_accessor :adpt_animal, :adopt_list
+  attr_accessor :name, :c_age, :c_gender, :c_number, :client_names
 
-  def initialize(adpt_animal)
-    @adpt_animal = @adpt_animal
-    @adopt_list = []
+  def initialize(name, c_age, c_gender, c_number)
+    @name = name
+    @c_age = c_age
+    @c_gender = c_gender
+    @c_number = []
   end
 
 end
 
+def add_flight(number_of_seats, destination)
+    flights << Flight.new(number_of_seats, destination)
+  end
 
-def adpt_list adpt_list
-  adopt_list << adpt_list
-end
+
+def initialize(client_data={})
+    @name = client_data[:name]
+    @c_age = client_data[:c_age]
+    @c_gender = client_data[:c_gender]
+    @c_number = client_data[:c_number]
+  end

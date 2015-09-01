@@ -2,8 +2,8 @@ require_relative 'clients'
 require_relative 'animals'
 require_relative 'shelter'
 
-anim = animal = Client.new('London Heathrow')
-
+client = Client.new('name')
+animal = Animals.new('name')
 
 def menu 
   puts `clear`
@@ -27,9 +27,9 @@ while response.downcase != 'q'
   case response
   when '1' # Add passenger to flight
     #create passenger
-    puts "What is the passenger\'s name?"
+    puts "What is the client\'s name?"
     name = gets.chomp
-    passenger = Passenger.new(name)
+    client = Client.new(name)
 
     # ask user what flight they want to be added to
     #list flights so it can be selected
@@ -64,7 +64,7 @@ while response.downcase != 'q'
     toys = gets.chomp
 
     # lhr is an instance method that talks to airort.rb page
-    puts lhr.add_flight(number_of_seats, destination)
+    puts anim.add_flight(number_of_seats, destination)
     gets
 
   when '4' # List passengers on a flight

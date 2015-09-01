@@ -5,22 +5,27 @@
 
 class Animals
 
-  attr_accessor :name, :a_age, :a_gender, :a_number
+  attr_accessor :breed, :a_gender, :age, :toys, :animal_names
 
-  def initialize(animal_data={})
-    @name = animal_data[:name]
-    @a_age = animal_data[:a_age]
-    @a_gender = animal_data[:a_gender]
-    @a_number = animal_data[:a_number]
+  def initialize(breed, gender, age)
+    @breed = breed
+    @a_gender = gender
+    @age = age
+    @toys = []
+    @animal_names = []
+  end
+
+
+  def add_toy toy
+    toys << toy
+  end
+  
+  def add_animal animal
+      client_names << client
+  end
+
+  def to_s
+    "#{a_gender} with #{breed} toys"
   end
 
 end
-
-
-
-def initialize(animal_data={})
-    @name = animal_data[:name]
-    @a_age = animal_data[:a_age]
-    @a_gender = animal_data[:a_gender]
-    @a_number = animal_data[:a_number]
-  end
