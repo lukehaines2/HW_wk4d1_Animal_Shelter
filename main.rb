@@ -2,8 +2,17 @@ require_relative 'clients'
 require_relative 'animals'
 require_relative 'shelter'
 
-client = Client.new('name')
-animal = Animals.new('name')
+cli = Clients.new('name')
+ani = Animals.new('name')
+
+def list_clients airport
+  clients.client_list.each_with_index { |client, index| puts "#{index}: #{client}" }
+end
+
+
+def list_passengers flight
+  flight.passengers.each_with_index { |passenger, index| puts "#{index}: #{passenger.name}"}
+end
 
 def menu 
   puts `clear`
@@ -25,28 +34,28 @@ response = menu
 
 while response.downcase != 'q'
   case response
-  when '1' # Add passenger to flight
-    #create passenger
+  when '1' # Add a new client
+    #create client
     puts "What is the client\'s name?"
     name = gets.chomp
-    client = Client.new(name)
+    client = Clients.new(name)
 
     # ask user what flight they want to be added to
     #list flights so it can be selected
-    puts "What flight do you want #{passenger.name} to be added to?"
-    list_flights(lhr)
+    puts "What flight do you want #{client.name} to be added to?"
+    list_clients(cli)
 
     flight_number = gets.to_i
     flight = lhr.flights[flight_number]
 
-    flight.add_passenger(passenger)
-    puts "#{passenger.name} has been added to #{flight}"
+    client.add_client(client)
+    puts "#{client.name} has been added to #{client_list}"
     gets
 
 
-  when '2' # List flights
-    puts 'Here are all of the flights:'
-    list_flights(lhr)
+  when '2' # List Clients
+    puts 'Here are all of the clientss:'
+    list_clients(cli)
     gets
 
 

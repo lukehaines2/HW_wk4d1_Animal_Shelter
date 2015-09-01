@@ -1,27 +1,34 @@
-# see the list of available animals to adopt
-# give up their animal for adoption
+
 
 class Clients
 
-  attr_accessor :name, :c_age, :c_gender, :c_number, :client_names
+  attr_accessor :name, :c_age, :c_gender, :p_number, :client_list
 
-  def initialize(name, c_age, c_gender, c_number)
+  def initialize(name, c_age, c_gender, p_number)
     @name = name
     @c_age = c_age
     @c_gender = c_gender
-    @c_number = []
+    @number_pets = number_pets
+    client_list = []
   end
 
+
+  def add_client(number_of_pets, client)
+    client_list << Clients.new(number_of_pets, client)
+  end
+
+  def p_number(pet)
+    p_number << Clients
+  end
+
+  def "The client #{name}has #{number_pets} pets"
+  end
+  
 end
 
-def add_flight(number_of_seats, destination)
-    flights << Flight.new(number_of_seats, destination)
-  end
-
-
-def initialize(client_data={})
-    @name = client_data[:name]
-    @c_age = client_data[:c_age]
-    @c_gender = client_data[:c_gender]
-    @c_number = client_data[:c_number]
-  end
+# def initialize(client_data={})
+#     @name = client_data[:name]
+#     @c_age = client_data[:c_age]
+#     @c_gender = client_data[:c_gender]
+#     @c_number = client_data[:c_number]
+#   end

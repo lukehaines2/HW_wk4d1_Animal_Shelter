@@ -1,7 +1,3 @@
-# - name
-# - age
-# - a_gender
-# - number of pets
 
 class Animals
 
@@ -25,7 +21,7 @@ class Animals
   end
 
   def to_s
-    "#{a_gender} with #{breed} toys"
+    "#{a_names} likes #{toys} "
   end
 
 end

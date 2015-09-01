@@ -1,3 +1,5 @@
+# see the list of available animals to adopt
+# give up their animal for adoption
 
 class Shelter
 
