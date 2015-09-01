@@ -1,5 +1,3 @@
-
-
 class Clients
 
   attr_accessor :name, :c_age, :c_gender, :p_number, :client_list
@@ -13,17 +11,13 @@ class Clients
   end
 
 
-  def add_client(number_of_pets, client)
-    client_list << Clients.new(number_of_pets, client)
-  end
-
-  def p_number(pet)
-    p_number << Clients
+  def add_client(number_of_pets, age, gender)
+    client_list << Clients.new(number_of_pets, age, gender)
   end
 
   def "The client #{name}has #{number_pets} pets"
   end
-  
+
 end
 
 # def initialize(client_data={})

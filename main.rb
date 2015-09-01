@@ -9,8 +9,7 @@ def list_clients airport
   clients.client_list.each_with_index { |client, index| puts "#{index}: #{client}" }
 end
 
-
-def list_passengers flight
+def list_animals animal
   animals.animal_names.each_with_index { |animal, index| puts "#{index}: #{animal_names.name}"}
 end
 
@@ -29,8 +28,6 @@ def menu
 end
 
 response = menu
-
-# if statemnt press 1 bring this menu up if 2 skip etc
 
 while response.downcase != 'q'
   case response
@@ -54,7 +51,7 @@ while response.downcase != 'q'
 
 
   when '2' # List Clients
-    puts 'Here are all of the clientss:'
+    puts 'Here are all of the clients:'
     list_clients(cli)
     gets
 
@@ -77,7 +74,9 @@ while response.downcase != 'q'
     gets
 
   when '4' # List animals
-    
+    puts 'Here are all of the pets:'
+    animal_names(anim)
+    gets
   end
 
     response = menu

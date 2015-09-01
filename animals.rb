@@ -1,4 +1,3 @@
-
 class Animals
 
   attr_accessor :a_number, :breed, :a_gender, :age, :toys, :animal_names
