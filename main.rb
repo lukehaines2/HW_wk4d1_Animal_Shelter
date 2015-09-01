@@ -11,7 +11,7 @@ end
 
 
 def list_passengers flight
-  flight.passengers.each_with_index { |passenger, index| puts "#{index}: #{passenger.name}"}
+  animals.animal_names.each_with_index { |animal, index| puts "#{index}: #{animal_names.name}"}
 end
 
 def menu 
@@ -42,11 +42,11 @@ while response.downcase != 'q'
 
     # ask user what flight they want to be added to
     #list flights so it can be selected
-    puts "What flight do you want #{client.name} to be added to?"
+    puts "What client do you want #{client.name} to be added to?"
     list_clients(cli)
 
-    flight_number = gets.to_i
-    flight = lhr.flights[flight_number]
+    animal_number = gets.to_i
+    client = cli.clients[client_list]
 
     client.add_client(client)
     puts "#{client.name} has been added to #{client_list}"
@@ -72,24 +72,12 @@ while response.downcase != 'q'
     puts "Does it have any favorite toys?"
     toys = gets.chomp
 
-    # lhr is an instance method that talks to airort.rb page
+    # anim is an instance method that talks to animals.rb page
     puts anim.add_flight(number_of_seats, destination)
     gets
 
-  when '4' # List passengers on a flight
+  when '4' # List animals
     
-    #list the flights
-    puts "What flight do you want to list the passengers from?"
-    list_flights(lhr)
-
-    # choose a flight
-    flight_number = gets.to_i
-    flight = lhr.flights[flight_number]
-
-    # loop through the passengers array in a nice way
-    puts 'The passengers for this flight are:'
-    list_passengers(flight)
-    gets
   end
 
     response = menu

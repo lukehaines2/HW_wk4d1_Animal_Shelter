@@ -1,9 +1,10 @@
 
 class Animals
 
-  attr_accessor :breed, :a_gender, :age, :toys, :animal_names
+  attr_accessor :a_number, :breed, :a_gender, :age, :toys, :animal_names
 
   def initialize(breed, gender, age)
+    @a_number = a_number
     @breed = breed
     @a_gender = gender
     @age = age
@@ -21,7 +22,7 @@ class Animals
   end
 
   def to_s
-    "#{a_names} likes #{toys} "
+    "#{animal_names} likes #{toys} "
   end
 
 end
